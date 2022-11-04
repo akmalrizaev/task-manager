@@ -6,12 +6,13 @@ require('dotenv').config()
 
 
 // Middlware
+app.use(express.static('./public'))
 app.use(express.json())
 
 // Route
-app.get('/hello', (req,res)=> {
-    res.send('Task Manager APP')
-})
+// app.get('/hello', (req,res)=> {
+//     res.send('Task Manager APP')
+// })
 
 app.use('/api/v1/tasks',tasks)
 
